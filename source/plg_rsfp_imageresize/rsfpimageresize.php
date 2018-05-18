@@ -69,6 +69,8 @@ class plgSystemRSFPImageResize extends JPlugin
 		$formId    = $params['formId'];
 		$fieldname = $params['fieldname'];
 		$file      = $params['file'];
+		//for pdf 
+		if(!in_array($file['type'], array('image/jpeg', 'image/png')))  return;
 		$name      = $params['name'];
 
 		$upload     = pathinfo($file);
